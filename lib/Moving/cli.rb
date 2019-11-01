@@ -1,30 +1,54 @@
 class Moving::CLI 
+  attr_accessor :vehicles, :rooms
+  @@all = []
+  
   
   def intro 
     puts "Hello, find your vehicle here!"
-    get_vehicles
-    
+    recommend_vehicle
   end 
-  
-  def vehicle
-end
 
-def room_size()
-  
-end
-  
-  
-  def get_vehicles(room_size)
-    input = nil 
-    while input = gets.strip.downcase
-    case input
-    when room_size = 1
-      puts "Cargo Van"
-    when room_size > 3 != 1
-      puts "16 Foot Truck"
-    when room_size > 7 != 3
-      puts "26 Foot Truck"
+def vehicle_selection
+  puts "Please select '#{vehicle}'"
+    if vehicle == 1
+    then vehicle = 'Cargo Van'
+      elsif vehicle == 2
+      then vehicle = '12 Foot Truck'
+        elsif vehicle == 3
+        then vehicle = '16 Foot Truck'
+          elsif vehicle = 4 || 5
+          then vehicle = '22 Foot Truck'
+            elsif vehicle = 6 || 7
+            then vehicle = '26 Foot Truck'
+            end 
+          end 
+        end
+    
+ 
+
+  def recommend_vehicle
+    x = "#{room}" 
+    if x < 1
+    puts vehicle_selection
+    if x == 2 
+    puts vehicle_selection 
+    if x == 3
+    puts vehicle_select
+  end 
+  end 
+  end 
+
+
+  def initialize(vehicle_select)
+    vehicle_select.each {|v, r| self.send(("#{r}="),v)}
+    @@all << self 
     end 
-  
-end 
+  end
+
+
+
+  def self.all
+  @@all
+  end
+
 
