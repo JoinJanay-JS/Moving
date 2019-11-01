@@ -26,17 +26,16 @@ def vehicle_selection
     
  
 
-  def recommend_vehicle
+   def recommend_vehicle
     x = "#{room}" 
     if x < 1
     puts vehicle_selection
-    if x == 2 
+    elsif x == 2 
     puts vehicle_selection 
-    if x == 3
-    puts vehicle_select
+    elsif x == 3
+    puts vehicle_selection
   end 
-  end 
-  end 
+  end
 
 
   def initialize(vehicle_select)

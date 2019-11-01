@@ -5,7 +5,7 @@ git status - shows unsaved work
 git add .
 git commit -m " message here "
 git remote add origin https://github.com/JoinJanay-JS/Moving.git
-git push -u origin master
+git push -u origin master 
 
 CLI Checklist 
 
